@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
+        'md': {'max': '768px'},
         '540': '540px'
       },
       boxShadow: {
