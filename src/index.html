@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./../dist/main.css" rel="stylesheet">
     <title>Bookmark Landing</title>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -44,13 +45,18 @@
                 <div class="flex items-center">
                     <div class="w-540 font-rubik">
                         <h1 class="desk__title font-medium  mb-6 text-dark_blue">A Simple Bookmark Manager</h1>
-                        <p class="desk__subtitle opacity-50 text-dark_blue mb-8">A clean and simple interface to organize
+                        <p class="desk__subtitle opacity-50 text-dark_blue mb-8">A clean and simple interface to
+                            organize
                             your favourite websites. Open a new browser tab and
                             see
                             your sites load instantly. Try it for free.</p>
                         <div>
-                            <button class="text-[14px] leading-[20px] font-medium py-2.5 px-6 bg-custom_blue rounded-5 text-white mr-4">Get it on Chrome</button>
-                            <button class="text-[14px] leading-[20px] font-medium py-2.5 px-6 rounded-5 bg-light_gray">Get it on Firefox</button>
+                            <button
+                                class="text-[14px] leading-[20px] font-medium py-2.5 px-6 bg-custom_blue rounded-5 text-white mr-4">Get
+                                it on Chrome</button>
+                            <button
+                                class="text-[14px] leading-[20px] font-medium py-2.5 px-6 rounded-5 bg-light_gray">Get
+                                it on Firefox</button>
                         </div>
                     </div>
                     <div class="w-[670px] h-[485.5px]">
@@ -60,7 +66,127 @@
                 </div>
             </div>
         </section>
+        <section class="py-20">
+            <div class="container mx-auto">
+                <div class="w-540 mx-auto font-rubik text-dark_blue">
+                    <h2 class="text-center font-medium text-[32px] leading-[52px]  mb-4">Features</h2>
+                    <p class="text-center text-[18px] leading-[28px] opacity-50">Our aim is to make it quick and easy
+                        for you to access your favourite websites. Your bookmarks
+                        sync between your devices so you can access them on the go.</p>
+                </div>
+            </div>
+        </section>
+        <section class="py-[72px] font-rubik">
+            <div class="xl:container xl:mx-auto">
+                <div class="w-[730px] mx-auto flex justify-center mb-[72px] border-b border-gray-200">
+                    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab"
+                        data-tabs-toggle="#myTabContent" role="tablist">
+                        <li role="presentation">
+                            <button class="inline-block pt-0 pb-8 px-[41px] rounded-t-lg border-b-4" id="simple-tab"
+                                data-tabs-target="#simple" type="button" role="tab" aria-controls="simple"
+                                aria-selected="false">Simple Bookmarking</button>
+                        </li>
+                        <li role="presentation">
+                            <button
+                                class="inline-block pt-0 pb-8 px-[41px] border-b-4 border-transparent hover:text-gray-600 hover:border-gray-300"
+                                id="speedy-tab" data-tabs-target="#speedy" type="button" role="tab"
+                                aria-controls="speedy" aria-selected="false">Speedy Searching</button>
+                        </li>
+                        <li role="presentation">
+                            <button
+                                class="inline-block pt-0 pb-8 px-[41px] border-b-4 border-transparent hover:text-gray-600 hover:border-gray-300"
+                                id="easy-tab" data-tabs-target="#easy" type="button" role="tab" aria-controls="easy"
+                                aria-selected="false">Easy Sharing</button>
+                        </li>
+                    </ul>
+                </div>
+                <div id="myTabContent">
+                    <div class="flex items-center" id="simple" role="tabpanel" aria-labelledby="simple-tab">
+                        <div class="relative mr-[125px]">
+                            <img class="relative z-10" src="./img/features-desk.svg" alt="desk">
+                            <img class="absolute left-[-65px] top-[95px] w-full z-0" src="./img/rectangle-2.svg"
+                                alt="rectangle">
+                        </div>
+                        <div class="w-[445px] text-dark_blue">
+                            <h2 class="font-medium text-[32px] leading-[52px] mb-4">Bookmark in one click
+                            </h2>
+                            <p class="text-[18px] leading-[28px] opacity-50 mb-8">Organize your bookmarks however you
+                                like. Our simple drag-and-drop interface gives you
+                                complete control over how you manage your favourite sites.</p>
+                            <button
+                                class="text-[14px] font-medium leading-[28px] tracking-[0.25px] bg-custom_blue py-2.5 px-6 rounded-5 text-white">More
+                                Info</button>
+                        </div>
+                    </div>
+                    <div class="flex items-center" id="speedy" role="tabpanel" aria-labelledby="speedy-tab">
+                        <div class="relative mr-[118px]">
+                            <img class="relative z-10" src="./img/intelli.svg" alt="desk">
+                            <img class="absolute left-[-65px] top-[95px] w-full z-0" src="./img/rectangle-2.svg"
+                                alt="rectangle">
+                        </div>
+                        <div class="w-[445px] text-dark_blue">
+                            <h2 class="font-medium text-[32px] leading-[52px] mb-4">Intelligent search
+                            </h2>
+                            <p class="text-[18px] leading-[28px] opacity-50 mb-8">Our powerful search feature will help
+                                you find saved sites in no time at all. No need to trawl through all of your bookmarks.
+                            </p>
+                            <button
+                                class="text-[14px] font-medium leading-[28px] tracking-[0.25px] bg-custom_blue py-2.5 px-6 rounded-5 text-white">More
+                                Info</button>
+                        </div>
+                    </div>
+                    <div class="flex items-center" id="easy" role="tabpanel" aria-labelledby="easy-tab">
+                        <div class="relative mr-[146px]">
+                            <img class="relative z-10" src="./img/bookmarks.svg" alt="desk">
+                            <img class="absolute left-[-65px] top-[95px] w-full z-0" src="./img/rectangle-2.svg"
+                                alt="rectangle">
+                        </div>
+                        <div class="w-[445px] text-dark_blue">
+                            <h2 class="font-medium text-[32px] leading-[52px] mb-4">Share your bookmarks
+                            </h2>
+                            <p class="text-[18px] leading-[28px] opacity-50 mb-8">Easily share your bookmarks and
+                                collections with others. Create a shareable link that you can send at the click of a
+                                button.</p>
+                            <button
+                                class="text-[14px] font-medium leading-[28px] tracking-[0.25px] bg-custom_blue py-2.5 px-6 rounded-5 text-white">More
+                                Info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        const tabElements = [
+            {
+                id: 'simple',
+                triggerEl: document.querySelector('#simple-tab'),
+                targetEl: document.querySelector('#simple')
+            },
+            {
+                id: 'speedy',
+                triggerEl: document.querySelector('#speedy-tab'),
+                targetEl: document.querySelector('#speedy')
+            },
+            {
+                id: 'easy',
+                triggerEl: document.querySelector('#easy-tab'),
+                targetEl: document.querySelector('#easy')
+            },
+        ];
+
+        // options with default values
+        const options = {
+            defaultTabId: 'simple',
+            activeClasses: 'text-custom_orange hover:text-blue-600 border-orange-600',
+            inactiveClasses: 'text-gray-500 hover:text-gray-600 border-gray-100 hover:border-gray-300',
+            onShow: () => {
+                console.log('tab is shown');
+            }
+        };
+    </script>
 </body>
 
 </html>
