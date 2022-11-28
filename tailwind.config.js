@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       spacing: {
         '540': '540px'
+      },
+      boxShadow: {
+        'custom': '0px 10px 20px -5px rgba(73, 93, 207, 0.20012)',
       }
     },
     fontFamily: {
@@ -12,7 +15,7 @@ module.exports = {
       'rubik': ['Rubik', 'sans-serif'],
     },
     colors: {
-      'white': '#FFFFFF', 
+      'white': '#FFFFFF',
       'custom_orange': '#FA5959',
       'dark_blue': '#242A45',
       'custom_blue': '#5267DF',
