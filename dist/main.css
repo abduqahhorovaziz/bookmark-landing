@@ -636,6 +636,10 @@ video {
   margin-right: 146px;
 }
 
+.mr-\[34px\] {
+  margin-right: 34px;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -644,20 +648,16 @@ video {
   margin-bottom: 6px;
 }
 
-.mr-\[\] {
-  margin-right: ;
-}
-
-.mr-\[34px\] {
-  margin-right: 34px;
-}
-
 .mt-10 {
   margin-top: 2.5rem;
 }
 
 .mt-20 {
   margin-top: 5rem;
+}
+
+.mb-14 {
+  margin-bottom: 3.5rem;
 }
 
 .block {
@@ -676,16 +676,12 @@ video {
   height: 485.5px;
 }
 
-.h-1 {
-  height: 0.25rem;
-}
-
-.h-\[\] {
-  height: ;
-}
-
 .h-\[371px\] {
   height: 371px;
+}
+
+.h-1 {
+  height: 0.25rem;
 }
 
 .w-540 {
@@ -767,16 +763,16 @@ video {
   border-bottom-left-radius: 9999px;
 }
 
-.border {
-  border-width: 1px;
-}
-
 .border-b {
   border-bottom-width: 1px;
 }
 
 .border-b-4 {
   border-bottom-width: 4px;
+}
+
+.border-t {
+  border-top-width: 1px;
 }
 
 .bg-custom_orange {
@@ -843,24 +839,19 @@ video {
   padding-right: 41px;
 }
 
-.py-\[\] {
-  padding-top: ;
-  padding-bottom: ;
-}
-
 .py-\[10px\] {
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-.px-\[\] {
-  padding-left: ;
-  padding-right: ;
-}
-
 .px-\[35\.5px\] {
   padding-left: 35.5px;
   padding-right: 35.5px;
+}
+
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
 }
 
 .pt-0 {
@@ -919,6 +910,10 @@ video {
   font-size: 13px;
 }
 
+.text-\[16px\] {
+  font-size: 16px;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -947,6 +942,14 @@ video {
   line-height: ;
 }
 
+.leading-\[32px\] {
+  line-height: 32px;
+}
+
+.leading-\[36px\] {
+  line-height: 36px;
+}
+
 .tracking-1\.5 {
   letter-spacing: 1.5px;
 }
@@ -957,6 +960,10 @@ video {
 
 .tracking-\[\] {
   letter-spacing: ;
+}
+
+.tracking-\[0\.15px\] {
+  letter-spacing: 0.15px;
 }
 
 .text-dark_blue {
@@ -977,10 +984,8 @@ video {
   opacity: 0.5;
 }
 
-.shadow {
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.opacity-70 {
+  opacity: 0.7;
 }
 
 .shadow-custom {
@@ -1004,6 +1009,11 @@ video {
   font-size: 14px;
   line-height: 28px;
   letter-spacing: 0.25px;
+}
+
+.hover\:text-custom_orange:hover {
+  --tw-text-opacity: 1;
+  color: rgb(250 89 89 / var(--tw-text-opacity));
 }
 
 @media (min-width: 1280px) {
