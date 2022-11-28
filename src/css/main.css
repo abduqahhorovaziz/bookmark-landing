@@ -2,3 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.desk__title {
+    font-size: 48px;
+    line-height: 52px;
+    letter-spacing: -0.15px;
+}
+
+.desk__subtitle {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.desk__btn {
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+}
