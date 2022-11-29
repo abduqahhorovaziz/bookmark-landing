@@ -4,7 +4,12 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        'md': {'max': '768px'},
+        '320': '320px',
+        'sm': '640px',
+        'sm-max': {'max': '640px'},
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
         '540': '540px'
       },
       boxShadow: {
@@ -19,6 +24,7 @@ module.exports = {
       'white': '#FFFFFF',
       'custom_orange': '#FA5959',
       'dark_blue': '#242A45',
+      'dark_blue_opacity': 'rgba(36, 42, 69, 0.95)',
       'custom_blue': '#5267DF',
       'custom_gray': '#9194A2',
       'light_gray': '#F7F7F7',

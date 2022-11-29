@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./../dist/main.css" rel="stylesheet">
+  <link href="./../dist/tailwind.css" rel="stylesheet">
   <title>Bookmark Landing</title>
   <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,14 +20,15 @@
 
 <body>
   <header>
-    <div class="container mx-auto py-12 md:py-6">
-      <nav class="font-rubik flex items-center">
+    <div class="container mx-auto py-12 max-[1024px]:px-8">
+      <nav class="font-rubik flex items-center max-[767px]:justify-between">
         <div>
           <a href="#">
             <img src="./img/logo.svg" alt="Logo">
           </a>
         </div>
-        <ul class="flex ml-auto gap-x-12 text-[13px] leading-[17px] tracking-1.5 text-dark_blue">
+        <ul
+          class="min-[768px]:flex max-[767px]:hidden ml-auto gap-x-12 text-[13px] leading-[17px] tracking-1.5 text-dark_blue">
           <li>
             <a href="#" class="hover:text-custom_orange ease-in transition duration-150">FEATURES</a>
           </li>
@@ -42,21 +43,58 @@
               class="px-9 py-3 border-2 border-transparent bg-custom_orange text-white rounded-5 hover:text-custom_orange hover:bg-white hover:border-2 hover:border-custom_orange transition ease-in duration-150">LOGIN</a>
           </li>
         </ul>
+        <button id="openMobileNav" type="button" class="min-[768px]:hidden">
+          <span class="w-[18px] h-[3px] block bg-dark_blue mb-[3px]"></span>
+          <span class="w-[18px] h-[3px] block bg-dark_blue mb-[3px]"></span>
+          <span class="w-[18px] h-[3px] block bg-dark_blue"></span>
+        </button>
       </nav>
+
+      <div id="mobileNav"
+        class="min-[768px]:hidden hidden fixed z-50 top-0 left-0 py-12 px-8 w-full h-full  flex-col bg-dark_blue_opacity">
+        <div class="flex justify-between items-center">
+          <img src="./img/logo-mobile.svg" alt="mobile logo" />
+          <button id="closeMobileNav">
+            <img src="./img/close.svg" alt="close">
+          </button>
+        </div>
+
+        <div class="flex justify-center mt-10 text-white">
+          <ul class="w-full text-center">
+            <li class="w-full border-t border-b border-custom_gray"><a href="#"
+                class="py-6 block text-[20px] tracking-[2.30769px]">FEATURES</a></li>
+            <li class="border-b border-custom_gray"><a href="#"
+                class="py-6 block text-[20px] tracking-[2.30769px]">PRICING</a></li>
+            <li class="border-b border-custom_gray"><a href="#"
+                class="py-6 block text-[20px] tracking-[2.30769px]">CONTACT</a></li>
+          </ul>
+        </div>
+
+        <button
+          class="w-full border-2 border-white rounded-5 mt-6 py-4 uppercase font-medium text-[20px] text-white tracking-[2.30769px]">Login</button>
+
+        <div class="w-full text-center mt-auto">
+          <a href="#" class="mr-10 hover:text-custom_orange ease-in transition duration-150 text-2xl"><i
+              class="fa-brands fa-square-facebook"></i></a>
+          <a href="#" class="hover:text-custom_orange ease-in transition duration-150 text-2xl"><i
+              class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main class="hidden">
-    <section class="relative">
+  <main>
+    <section class="desk relative">
       <div class="container mx-auto">
-        <div class="flex items-center">
-          <div class="w-540 font-rubik text-dark_blue">
-            <h1 class="font-medium mb-6 text-5xl leading-[52px] tracking-[-0.15px]">A Simple Bookmark Manager</h1>
-            <p class="text-lg leading-7 opacity-50 mb-8">A clean and simple interface to
+        <div class="desk__wrapper flex items-center max-[1300px]:flex-col-reverse max-[768]:px-4">
+          <div class="desk__content w-540 font-rubik text-dark_blue max-[1300px]:text-center">
+            <h1 class="desk__title font-medium mb-6 text-5xl leading-[52px] tracking-[-0.15px]">A Simple Bookmark
+              Manager</h1>
+            <p class="desk__subtitle text-lg leading-7 opacity-50 mb-8">A clean and simple interface to
               organize your favourite websites. Open a new browser tab and
               see your sites load instantly. Try it for free.</p>
             <div>
-              <button class="text-[14px]
+              <button class="desk__btn text-[14px]
                 leading-[20px]
                 font-medium 
                 py-2.5 px-6  
@@ -73,7 +111,7 @@
                 hover:border-custom_blue
                 text-white mr-4">Get
                 it on Chrome</button>
-              <button class="text-[14px] 
+              <button class="desk__btn text-[14px] 
                 leading-[20px] 
                 font-medium 
                 py-2.5 
@@ -92,53 +130,54 @@
                 it on Firefox</button>
             </div>
           </div>
-          <div class="w-[670px] h-[485.5px]">
-            <img class="absolute right-[91.5px] z-10" src="./img/desktop.png" alt="desk">
-            <img class="absolute right-0 top-[9rem] z-0" src="./img/rectangle.svg" alt="rectangle">
+          <div class="desk__image w-[670px] h-[485.5px] 320:mb-10">
+            <img class="desk__image_el absolute md:right-[91.5px] z-10" src="./img/desktop.png" alt="desk">
+            <img class="desk__image_el absolute right-0 top-[9rem] z-0" src="./img/rectangle.svg" alt="rectangle">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-20">
+    <section class="features py-20 320:overflow-hidden">
       <div class="container mx-auto mb-[72px]">
-        <div class="w-540 mx-auto font-rubik text-dark_blue">
-          <h2 class="text-center font-medium text-[32px] leading-[52px]  mb-4">Features</h2>
-          <p class="text-center text-[18px] leading-[28px] opacity-50">Our aim is to make it quick and easy
+        <div class="features__header w-540 mx-auto font-rubik text-dark_blue">
+          <h2 class="features__title text-center font-medium text-[32px] leading-[52px]  mb-4">Features</h2>
+          <p class="features__subtitle text-center text-[18px] leading-[28px] opacity-50">Our aim is to make it quick and easy
             for you to access your favourite websites. Your bookmarks
             sync between your devices so you can access them on the go.</p>
         </div>
       </div>
-      <div class="xl:container xl:mx-auto">
-        <div class="w-[730px] mx-auto flex justify-center mb-[72px] border-b border-gray-200">
-          <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent"
-            role="tablist">
-            <li role="presentation">
-              <button class="inline-block pt-0 pb-8 px-[41px] border-transparent border-b-4" id="simple-tab"
-                data-tabs-target="#simple" type="button" role="tab" aria-controls="simple" aria-selected="false">Simple
+      <div class="container mx-auto">
+        <div class="feature__tab sm:w-[730px] 320:w-full mx-auto flex justify-center mb-[72px] border-b border-gray-200">
+          <ul class="feature__tab_list 320:[660px]:flex-col sm:flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab"
+            data-tabs-toggle="#myTabContent" role="tablist">
+            <li role="presentation" class="feature__tab_el">
+              <button class="inline-block pt-0 pb-8 px-[41px] border-transparent border-b-4"
+                id="simple-tab" data-tabs-target="#simple" type="button" role="tab" aria-controls="simple"
+                aria-selected="false">Simple
                 Bookmarking</button>
             </li>
-            <li role="presentation">
+            <li role="presentation" class="feature__tab_el">
               <button
                 class="inline-block pt-0 pb-8 px-[41px] border-b-4 border-transparent hover:text-gray-600 hover:border-gray-300"
                 id="speedy-tab" data-tabs-target="#speedy" type="button" role="tab" aria-controls="speedy"
                 aria-selected="false">Speedy Searching</button>
             </li>
-            <li role="presentation">
+            <li role="presentation" class="feature__tab_el">
               <button
-                class="inline-block pt-0 pb-8 px-[41px] border-b-4 border-transparent hover:text-gray-600 hover:border-gray-300"
+                class="inline-block pt-0 pb-8 px-[41px] border-b-4 border-transparent hover:text-gray-600 hover:border-gray-300 320:mb-4"
                 id="easy-tab" data-tabs-target="#easy" type="button" role="tab" aria-controls="easy"
                 aria-selected="false">Easy Sharing</button>
             </li>
           </ul>
         </div>
         <div id="myTabContent">
-          <div class="flex items-center" id="simple" role="tabpanel" aria-labelledby="simple-tab">
+          <div class="flex sm:items-center" id="simple" role="tabpanel" aria-labelledby="simple-tab">
             <div class="relative mr-[125px]">
               <img class="relative z-10" src="./img/features-desk.svg" alt="desk">
               <img class="absolute left-[-65px] top-[95px] w-full z-0" src="./img/rectangle-2.svg" alt="rectangle">
             </div>
-            <div class="w-[445px] text-dark_blue">
+            <div class="w-[445px] text-dark_blue sm:mt-0 320:mt-10">
               <h2 class="font-medium text-[32px] leading-[52px] mb-4">Bookmark in one click
               </h2>
               <p class="text-[18px] leading-[28px] opacity-50 mb-8">Organize your bookmarks however you
@@ -417,6 +456,8 @@
       </div>
     </section>
 
+
+
     <footer class="pt-[58px] bg-custom_blue text-white font-rubik">
       <div class="container mx-auto pb-16">
         <div class="w-[442px] mx-auto text-center">
@@ -459,12 +500,14 @@
               <li class="nav__item">
                 <a href="#" class="hover:text-custom_orange ease-in transition duration-150">CONTACT</a>
               </li>
-            
+
             </ul>
           </nav>
-          <div class="flex items-center ml-auto">
-            <a href="#" class="mr-10 hover:text-custom_orange ease-in transition duration-150 text-2xl"><i class="fa-brands fa-square-facebook"></i></a>
-            <a href="#" class="hover:text-custom_orange ease-in transition duration-150 text-2xl"><i class="fa-brands fa-twitter"></i></a>
+          <div class="flex items-center ml-auto ">
+            <a href="#" class="mr-10 hover:text-custom_orange ease-in transition duration-150 text-2xl text-[#fff]"><i
+                class="fa-brands fa-square-facebook"></i></a>
+            <a href="#" class="hover:text-custom_orange ease-in transition duration-150 text-2xl text-white"><i
+                class="fa-brands fa-twitter "></i></a>
           </div>
         </div>
 
