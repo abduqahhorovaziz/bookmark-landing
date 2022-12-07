@@ -21,15 +21,15 @@
 
 <body>
   <header>
-    <div class="container-custom py-12 max-[1024px]:px-8">
-      <nav class="font-rubik flex items-center max-[767px]:justify-between">
+    <div class="container-custom py-12 lg:px-8">
+      <nav class="font-rubik flex items-center justify-between">
         <div>
           <a href="#">
             <img src="./img/logo.svg" alt="Logo">
           </a>
         </div>
         <ul
-          class="min-[768px]:flex max-[767px]:hidden ml-auto gap-x-12 text-[13px] leading-[17px] tracking-1.5 text-dark_blue">
+          class="md:flex hidden ml-auto gap-x-12 text-[13px] leading-[17px] tracking-1.5 text-dark_blue">
           <li>
             <a href="#" class="hover:text-custom_orange ease-in transition duration-150">FEATURES</a>
           </li>
@@ -44,7 +44,7 @@
               class="px-9 py-3 border-2 border-transparent bg-custom_orange text-white rounded-5 hover:text-custom_orange hover:bg-white hover:border-2 hover:border-custom_orange transition ease-in duration-150">LOGIN</a>
           </li>
         </ul>
-        <button id="openMobileNav" type="button" class="min-[768px]:hidden">
+        <button id="openMobileNav" type="button" class="md:hidden">
           <span class="w-[18px] h-[3px] block bg-dark_blue mb-[3px]"></span>
           <span class="w-[18px] h-[3px] block bg-dark_blue mb-[3px]"></span>
           <span class="w-[18px] h-[3px] block bg-dark_blue"></span>
@@ -52,7 +52,7 @@
       </nav>
 
       <div id="mobileNav"
-        class="min-[768px]:hidden hidden fixed z-50 top-0 left-0 py-12 px-8 w-full h-full  flex-col bg-dark_blue_opacity">
+        class="md:hidden hidden fixed z-50 top-0 left-0 py-12 px-8 w-full h-full  flex-col bg-dark_blue_opacity">
         <div class="flex justify-between items-center">
           <img src="./img/logo-mobile.svg" alt="mobile logo" />
           <button id="closeMobileNav">
@@ -85,8 +85,8 @@
   </header>
 
   <main>
-    <section class="desk section overflow-hidden pt-[60px]">
-      <div class="container-custom relative">
+    <section class="desk section overflow-hidden pt-[60px] relative">
+      <div class="container-custom ">
         <div class="desk__wrapper flex items-center max-[1300px]:flex-col-reverse max-[768]:px-4">
           <div class="desk__content w-540 font-rubik text-dark_blue max-[1300px]:text-center">
             <h1 class="desk__title font-medium mb-6 text-5xl leading-[52px] tracking-[-0.15px]">A Simple Bookmark
@@ -110,7 +110,7 @@
                 hover:bg-white
                 hover:text-custom_blue
                 hover:border-custom_blue
-                text-white mr-4">Get
+                text-white lg:mr-4">Get
                 it on Chrome</button>
               <button class="desk__btn text-[14px] 
                 leading-[20px] 
@@ -127,14 +127,16 @@
                 hover:bg-white
                 hover:text-custom_gray
                 hover:border-custom_gray
-                bg-light_gray">Get
+                bg-light_gray
+                lg:mt-0 mt-3">Get
                 it on Firefox</button>
             </div>
           </div>
           <div class="desk__image w-[670px] h-[485.5px] 320:mb-10">
-            <img class="desk__image_el absolute md:right-[-74px] z-10" src="./img/desktop.png" alt="desk">
+            <!-- <img class="desk__image_el absolute md:right-[-74px] z-10" src="./img/desktop.png" alt="desk">
             <img class="desk__image_el absolute right-[-576px] top-[134px] z-0" src="./img/rectangle-full.jpg"
-              alt="rectangle">
+              alt="rectangle"> -->
+              <img src="./img/desk-and-rect.png" class="absolute  right-0" alt="">
           </div>
         </div>
       </div>
@@ -153,7 +155,7 @@
       </div>
       <div class="container mx-auto">
         <div
-          class="feature__tab sm:w-[730px] 320:w-full mx-auto flex justify-center mb-[72px] border-b border-gray-200">
+          class="feature__tab sm:w-[730px] w-full mx-auto flex justify-center mb-[72px] border-b border-gray-200">
           <ul class="feature__tab_list 320:[660px]:flex-col sm:flex flex-wrap -mb-px text-sm font-medium text-center"
             id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
             <li role="presentation" class="feature__tab_el">
@@ -277,7 +279,7 @@
         </div>
         <div class="md:flex flex-col justify-center items-center">
           <div class="flex lg:flex-row flex-col items-center pt-12">
-            <div class="lg:mr-[34px] w-[280px] h-[371px] p-6 text-center relative rounded-[15px] shadow-custom">
+            <div class="lg:mr-[34px] lg:w-[280px] md:w-[600px] sm:w-[500px] h-[371px] p-6 text-center relative rounded-[15px] shadow-custom">
               <img class="inline-block mt-6 mb-8" src="./img/icons/chrome.png" alt="chrome">
               <h4 class="font-medium text-[20px] leading-[24px] tracking-[0.25px] mb-[6px]">Add to Chrome
               </h4>
@@ -315,7 +317,7 @@
               </button>
             </div>
 
-            <div class="mt-10 lg:mr-[34px] w-[280px] h-[371px] p-6 text-center relative rounded-[15px] shadow-custom">
+            <div class="mt-10 lg:mr-[34px] lg:w-[280px] md:w-[600px] sm:w-[500px] h-[371px] p-6 text-center relative rounded-[15px] shadow-custom">
               <img class="inline-block mt-6 mb-8" src="./img/icons/firefox.png" alt="chrome">
               <h4 class="font-medium text-[20px] leading-[24px] tracking-[0.25px] mb-[6px]">Add to Firefox
               </h4>
@@ -353,7 +355,7 @@
               </button>
             </div>
 
-            <div class="mt-20 w-[280px] h-[371px] p-6 text-center relative rounded-[15px] shadow-custom">
+            <div class="mt-20 lg:w-[280px] md:w-[600px] sm:w-[500px] h-[371px] p-6 text-center relative rounded-[15px] shadow-custom">
               <img class="inline-block mt-6 mb-8" src="./img/icons/opera.svg" alt="chrome">
               <h4 class="font-medium text-[20px] leading-[24px] tracking-[0.25px] mb-[6px]">Add to Opera
               </h4>
