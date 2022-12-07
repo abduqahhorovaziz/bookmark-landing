@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./../dist/tailwind.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/global.css">
   <title>Bookmark Landing</title>
   <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,8 +20,8 @@
 </head>
 
 <body>
-  <header >
-    <div class="container mx-auto py-12 max-[1024px]:px-8">
+  <header>
+    <div class="container-custom py-12 max-[1024px]:px-8">
       <nav class="font-rubik flex items-center max-[767px]:justify-between">
         <div>
           <a href="#">
@@ -73,7 +74,7 @@
         <button
           class="w-full border-2 border-white rounded-5 mt-6 py-4 uppercase font-medium text-[20px] text-white tracking-[2.30769px]">Login</button>
 
-        <div class="w-full text-center mt-auto">
+        <div class="w-full text-center mt-auto text-white">
           <a href="#" class="mr-10 hover:text-custom_orange ease-in transition duration-150 text-2xl"><i
               class="fa-brands fa-square-facebook"></i></a>
           <a href="#" class="hover:text-custom_orange ease-in transition duration-150 text-2xl"><i
@@ -84,8 +85,8 @@
   </header>
 
   <main>
-    <section class="desk relative">
-      <div class="container mx-auto">
+    <section class="desk section overflow-hidden pt-[60px]">
+      <div class="container-custom relative">
         <div class="desk__wrapper flex items-center max-[1300px]:flex-col-reverse max-[768]:px-4">
           <div class="desk__content w-540 font-rubik text-dark_blue max-[1300px]:text-center">
             <h1 class="desk__title font-medium mb-6 text-5xl leading-[52px] tracking-[-0.15px]">A Simple Bookmark
@@ -131,8 +132,9 @@
             </div>
           </div>
           <div class="desk__image w-[670px] h-[485.5px] 320:mb-10">
-            <img class="desk__image_el absolute md:right-[91.5px] z-10" src="./img/desktop.png" alt="desk">
-            <img class="desk__image_el absolute right-0 top-[9rem] z-0" src="./img/rectangle.svg" alt="rectangle">
+            <img class="desk__image_el absolute md:right-[-74px] z-10" src="./img/desktop.png" alt="desk">
+            <img class="desk__image_el absolute right-[-576px] top-[134px] z-0" src="./img/rectangle-full.jpg"
+              alt="rectangle">
           </div>
         </div>
       </div>
@@ -141,46 +143,54 @@
     <section class="features py-20 320:overflow-hidden">
       <div class="container mx-auto mb-[72px]">
         <div class="features__header max-w-[540px] mx-auto font-rubik text-dark_blue">
-          <h2 class="features__title text-center font-medium lg:text-[32px] lg:leading-[52px] text-[24px] mb-4">Features</h2>
-          <p class="features__subtitle text-center lg:text-[18px] lg:leading-[28px] text-[15px]opacity-50">Our aim is to make it quick and easy
+          <h2 class="features__title text-center font-medium lg:text-[32px] lg:leading-[52px] text-[24px] mb-4">Features
+          </h2>
+          <p class="features__subtitle text-center lg:text-[18px] lg:leading-[28px] text-[15px]opacity-50">Our aim is to
+            make it quick and easy
             for you to access your favourite websites. Your bookmarks
             sync between your devices so you can access them on the go.</p>
         </div>
       </div>
       <div class="container mx-auto">
-        <div class="feature__tab sm:w-[730px] 320:w-full mx-auto flex justify-center mb-[72px] border-b border-gray-200">
-          <ul class="feature__tab_list 320:[660px]:flex-col sm:flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab"
-            data-tabs-toggle="#myTabContent" role="tablist">
+        <div
+          class="feature__tab sm:w-[730px] 320:w-full mx-auto flex justify-center mb-[72px] border-b border-gray-200">
+          <ul class="feature__tab_list 320:[660px]:flex-col sm:flex flex-wrap -mb-px text-sm font-medium text-center"
+            id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
             <li role="presentation" class="feature__tab_el">
-              <button class="inline-block pt-0 pb-8 px-[41px] border-transparent border-b-4"
+              <button class="inline-block pt-0 pb-8 px-[41px] border-transparent border-b-4 duration-200 ease-in"
                 id="simple-tab" data-tabs-target="#simple" type="button" role="tab" aria-controls="simple"
                 aria-selected="false">Simple
                 Bookmarking</button>
             </li>
-            <li role="presentation" class="feature__tab_el">
+            <li role="presentation" class="feature__tab_el sm:mt-0 mt-[20px]">
               <button
-                class="inline-block pt-0 pb-8 px-[41px] border-b-4 border-transparent hover:text-gray-600 hover:border-gray-300"
+                class="inline-block pt-0 pb-8 px-[41px] border-b-4 border-transparent hover:text-gray-600 hover:border-gray-300 duration-200 ease-in"
                 id="speedy-tab" data-tabs-target="#speedy" type="button" role="tab" aria-controls="speedy"
                 aria-selected="false">Speedy Searching</button>
             </li>
-            <li role="presentation" class="feature__tab_el">
+            <li role="presentation" class="feature__tab_el sm:mt-0 mt-[20px]">
               <button
-                class="inline-block pt-0 pb-8 px-[41px] border-b-4 border-transparent hover:text-gray-600 hover:border-gray-300 320:mb-4"
+                class="inline-block pt-0 pb-8 px-[41px] border-b-4 border-transparent hover:text-gray-600 hover:border-gray-300 320:mb-4 duration-200 ease-in"
                 id="easy-tab" data-tabs-target="#easy" type="button" role="tab" aria-controls="easy"
                 aria-selected="false">Easy Sharing</button>
             </li>
           </ul>
         </div>
         <div id="myTabContent">
-          <div class="flex lg:flex-row flex-col items-center justify-center sm:items-center" id="simple" role="tabpanel" aria-labelledby="simple-tab">
+          <div
+            class="flex lg:flex-row flex-col items-center justify-center sm:items-center animate-opacit duration-200 ease-in"
+            id="simple" role="tabpanel" aria-labelledby="simple-tab">
             <div class="relative mr-[125px]">
               <img class="relative z-10 lg:ml-4" src="./img/features-desk.svg" alt="desk">
-              <img class="absolute left-[-65px] lg:top-[95px] top-[70px]  w-full z-0" src="./img/rectangle-2.svg" alt="rectangle">
+              <img class="absolute left-[-65px] lg:top-[95px] top-[70px]  w-full z-0" src="./img/rectangle-2.svg"
+                alt="rectangle">
             </div>
             <div class="max-w-[445px] text-dark_blue text-center lg:text-left lg:mt-0 mt-12">
-              <h2 class="font-medium lg:text-[32px] lg:leading-[52px] text-[24px] text-center lg:text-left mb-4">Bookmark in one click
+              <h2 class="font-medium lg:text-[32px] lg:leading-[52px] text-[24px] text-center lg:text-left mb-4">
+                Bookmark in one click
               </h2>
-              <p class="lg:text-[18px] text-[15px] lg:leading-[28px] lg:text-left text-center opacity-50 mb-8">Organize your bookmarks however you
+              <p class="lg:text-[18px] text-[15px] lg:leading-[28px] lg:text-left text-center opacity-50 mb-8">Organize
+                your bookmarks however you
                 like. Our simple drag-and-drop interface gives you
                 complete control over how you manage your favourite sites.</p>
               <button class="text-[14px] font-medium leading-[28px] tracking-[0.25px] bg-custom_blue py-2.5 px-6 box-border
@@ -196,15 +206,21 @@
                 Info</button>
             </div>
           </div>
-          <div class="flex lg:flex-row flex-col items-center justify-center sm:items-center" id="speedy" role="tabpanel" aria-labelledby="simple-tab">
+          <div
+            class="flex lg:flex-row flex-col items-center justify-center sm:items-center animate-opacit duration-200 ease-in"
+            id="speedy" role="tabpanel" aria-labelledby="simple-tab">
             <div class="relative mr-[125px]">
               <img class="relative z-10 lg:ml-4" src="./img/intelli.svg" alt="desk">
-              <img class="absolute left-[-65px] lg:top-[95px] top-[70px]  w-full z-0" src="./img/rectangle-2.svg" alt="rectangle">
+              <img class="absolute left-[-65px] lg:top-[95px] top-[70px]  w-full z-0" src="./img/rectangle-2.svg"
+                alt="rectangle">
             </div>
             <div class="max-w-[445px] text-dark_blue text-center lg:text-left lg:mt-0 mt-12">
-              <h2 class="font-medium lg:text-[32px] lg:leading-[52px] text-[24px] text-center lg:text-left mb-4">Intelligent search
+              <h2 class="font-medium lg:text-[32px] lg:leading-[52px] text-[24px] text-center lg:text-left mb-4">
+                Intelligent search
               </h2>
-              <p class="lg:text-[18px] text-[15px] lg:leading-[28px] lg:text-left text-center opacity-50 mb-8">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+              <p class="lg:text-[18px] text-[15px] lg:leading-[28px] lg:text-left text-center opacity-50 mb-8">Our
+                powerful search feature will help you find saved sites in no time at all. No need to trawl through all
+                of your bookmarks.</p>
               <button class="text-[14px] font-medium leading-[28px] tracking-[0.25px] bg-custom_blue py-2.5 px-6 box-border
                 rounded-5
                 border-2
@@ -218,15 +234,21 @@
                 Info</button>
             </div>
           </div>
-          <div class="flex lg:flex-row flex-col items-center justify-center sm:items-center" id="easy" role="tabpanel" aria-labelledby="simple-tab">
+          <div
+            class="flex lg:flex-row flex-col items-center justify-center sm:items-center animate-opacit duration-200 ease-in"
+            id="easy" role="tabpanel" aria-labelledby="simple-tab">
             <div class="relative mr-[125px]">
               <img class="relative z-10 lg:ml-4" src="./img/bookmarks.svg   " alt="desk">
-              <img class="absolute left-[-65px] lg:top-[95px] top-[70px]  w-full z-0" src="./img/rectangle-2.svg" alt="rectangle">
+              <img class="absolute left-[-65px] lg:top-[95px] top-[70px]  w-full z-0" src="./img/rectangle-2.svg"
+                alt="rectangle">
             </div>
             <div class="max-w-[445px] text-dark_blue text-center lg:text-left lg:mt-0 mt-12">
-              <h2 class="font-medium lg:text-[32px] lg:leading-[52px] text-[24px] text-center lg:text-left mb-4">Share your bookmarks
+              <h2 class="font-medium lg:text-[32px] lg:leading-[52px] text-[24px] text-center lg:text-left mb-4">Share
+                your bookmarks
               </h2>
-              <p class="lg:text-[18px] text-[15px] lg:leading-[28px] lg:text-left text-center opacity-50 mb-8">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+              <p class="lg:text-[18px] text-[15px] lg:leading-[28px] lg:text-left text-center opacity-50 mb-8">Easily
+                share your bookmarks and collections with others. Create a shareable link that you can send at the click
+                of a button.</p>
               <button class="text-[14px] font-medium leading-[28px] tracking-[0.25px] bg-custom_blue py-2.5 px-6 box-border
                 rounded-5
                 border-2
@@ -240,22 +262,22 @@
                 Info</button>
             </div>
           </div>
-          
+
         </div>
       </div>
     </section>
 
     <section class="pt-[69px] pb-20 font-rubik text-dark_blue">
-      <div class="container mx-auto">
+      <div class="container-custom mx-auto">
         <div class="max-w-[540px] mx-auto text-center">
           <h2 class="font-medium text-[24px] lg:text-[32px] lg:leading-[52px] mb-4">Download the extension</h2>
           <p class="text-center text-[15px] lg:text-[18px] lg:leading-[28px] opacity-50">We’ve got more browsers in the
             pipeline. Please do let us know if you’ve got a favourite you’d
             like us to prioritize.</p>
         </div>
-        <div class="lg:flex 320:flex-col justify-center">
+        <div class="md:flex flex-col justify-center items-center">
           <div class="flex lg:flex-row flex-col items-center pt-12">
-            <div class="mr-[34px] w-[280px] h-[371px] p-6 text-center relative rounded-[15px] shadow-custom">
+            <div class="lg:mr-[34px] w-[280px] h-[371px] p-6 text-center relative rounded-[15px] shadow-custom">
               <img class="inline-block mt-6 mb-8" src="./img/icons/chrome.png" alt="chrome">
               <h4 class="font-medium text-[20px] leading-[24px] tracking-[0.25px] mb-[6px]">Add to Chrome
               </h4>
@@ -293,7 +315,7 @@
               </button>
             </div>
 
-            <div class="mt-10 mr-[34px] w-[280px] h-[371px] p-6 text-center relative rounded-[15px] shadow-custom">
+            <div class="mt-10 lg:mr-[34px] w-[280px] h-[371px] p-6 text-center relative rounded-[15px] shadow-custom">
               <img class="inline-block mt-6 mb-8" src="./img/icons/firefox.png" alt="chrome">
               <h4 class="font-medium text-[20px] leading-[24px] tracking-[0.25px] mb-[6px]">Add to Firefox
               </h4>
@@ -377,67 +399,74 @@
     <section class="pt-[69px] pb-20">
       <div class="container mx-auto mb-[72px]">
         <div class="max-w-[540px] mx-auto font-rubik text-dark_blue mb-14">
-          <h2 class="text-center font-medium text-[24px] lg:text-[32px] lg:leading-[52px]  mb-4">Frequently Asked Questions</h2>
-          <p class="text-center text-[15px] lg:text-[18px] lg:leading-[28px] opacity-50">Here are some of our FAQs. If you have
+          <h2 class="text-center font-medium text-[24px] lg:text-[32px] lg:leading-[52px]  mb-4">Frequently Asked
+            Questions</h2>
+          <p class="text-center text-[15px] lg:text-[18px] lg:leading-[28px] opacity-50">Here are some of our FAQs. If
+            you have
             any other questions you’d like answered please feel free to email us.</p>
         </div>
         <div class="max-w-[540px] px-2 lg:px-0 mx-auto font-rubik">
-          <div class="border-t border-b">
-            <button
-              class="accordion py-3 text-[15px] lg:text-[18px] lg:leading-[32px] hover:text-custom_orange transition ease-in duration-150">What
-              is
-              Bookmark? </button>
-            <div class="panel py-7 pt-0" style="display:none">
-              <p class="lg:text-[16px] lg:leading-[36px] text-[14px] leading-[20px] tracking-[0.15px] opacity-70">Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco
-                laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-          </div>
-          <div class="border-t border-b">
-            <button
-              class="accordion py-3 text-[15px] lg:text-[18px] lg:leading-[32px]  hover:text-custom_orange transition ease-in duration-150">How
-              can I
-              request a new browser?</button>
-            <div class="panel py-7 pt-0" style="display:none">
-              <p class="lg:text-[16px] lg:leading-[36px] text-[14px] leading-[20px] tracking-[0.15px] opacity-70">Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco
-                laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-          </div>
-          <div class="border-t border-b">
-            <button
-              class="accordion py-3 text-[15px] lg:text-[18px] lg:leading-[32px]  hover:text-custom_orange transition ease-in duration-150">Is
-              there a
-              mobile app?</button>
-            <div class="panel py-7 pt-0" style="display:none">
-              <p class="lg:text-[16px] lg:leading-[36px] text-[14px] leading-[20px] tracking-[0.15px] opacity-70">Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco
-                laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-          </div>
-          <div class="border-t border-b">
-            <button
-              class="accordion py-3 text-[15px] lg:text-[18px] lg:leading-[32px]  hover:text-custom_orange transition ease-in duration-150">What
-              about
-              other Chromium browsers?</button>
-            <div class="panel py-7 pt-0" style="display:none">
-              <p class="lg:text-[16px] lg:leading-[36px] text-[14px] leading-[20px] tracking-[0.15px] opacity-70">Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco
-                laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-          </div>
+          <div class="accordion">
+            <div class="item">
+              <div class="flex items-center justify-between">
+                <a href="#acc1"
+                  class="acc-heading text-[#242A45] text-[18px] leading-[32px] hover:text-custom_orange transition duration:200 ease-in">What
+                  is Bookmark?</a>
+                <!-- <i class="acc-icon fa-solid fa-chevron-down"></i> -->
+              </div>
+
+              <section id="acc1" class="acc-content">
+                <div class="inner">
+                  Aenean tincidunt eros a mauris mollis tincidunt. In fermentum sodales est ac mollis. Vivamus ac lacus
+                  sed libero dictum molestie. Vestibulum porta, libero eget hendrerit ultrices, felis risus lacinia
+                  ipsum, ut viverra quam erat id leo. Nunc nulla nibh, varius nec nunc a, fringilla porttitor magna.
+                </div><!-- / .inner -->
+              </section>
+            </div><!-- / .item -->
+
+            <div class="item">
+              <div class="flex items-center justify-between">
+                <a href="#acc2"
+                  class="acc-heading text-[#242A45] text-[18px] leading-[32px] hover:text-custom_orange transition duration:200 ease-in">How
+                  can I request a new browser?</a>
+                  <!-- <i class="acc-icon fa-solid fa-chevron-down"></i> -->
+              </div>
+
+              <section id="acc2" class="acc-content">
+                <div class="inner">
+                  Quisque condimentum dolor nec interdum rhoncus. Mauris at vestibulum ante, ut pellentesque ipsum.
+                  Morbi vulputate lorem eu malesuada aliquet. Nam in augue vitae orci viverra mattis at id velit. Donec
+                  efficitur dui leo. Aenean ultrices aliquet luctus. Mauris eget viverra enim. Mauris sit amet sapien
+                  faucibus, ornare erat sit amet, congue arcu. In hac habitasse platea dictumst.
+                </div><!-- / .inner -->
+              </section>
+            </div><!-- / .item -->
+            <div class="item">
+              <a href="#acc3"
+                class="acc-heading text-[#242A45] text-[18px] leading-[32px] hover:text-custom_orange transition duration:200 ease-in">Is
+                there a mobile app?</a>
+
+              <section id="acc3" class="acc-content">
+                <div class="inner">
+                  Aenean ultrices aliquet luctus. Mauris eget viverra enim. Mauris sit amet sapien faucibus, ornare erat
+                  sit amet, congue arcu. In hac habitasse platea dictumst.
+                </div><!-- / .inner -->
+              </section>
+            </div><!-- / .item -->
+            <div class="item">
+              <a href="#acc4"
+                class="acc-heading text-[#242A45] text-[18px] leading-[32px] hover:text-custom_orange transition duration:200 ease-in">What
+                about other Chromium browsers?</a>
+
+              <section id="acc4" class="acc-content">
+                <div class="inner">
+                  Aenean ultrices aliquet luctus. Mauris eget viverra enim. Mauris sit amet sapien faucibus, ornare erat
+                  sit amet, congue arcu. In hac habitasse platea dictumst.
+                </div><!-- / .inner -->
+              </section>
+            </div><!-- / .item -->
+          </div><!-- / .accordion -->
+
         </div>
         <button class="text-[14px] font-medium leading-[28px] tracking-[0.25px] bg-custom_blue py-2.5 px-6 box-border
         rounded-5
@@ -462,9 +491,10 @@
           <h4 class="font-medium lg:text-[32px] text-[24px] leading-10 mb-9 tracking-[-0.1px]">Stay up-to-date with what
             we’re doing</h4>
           <form class="flex flex-col lg:flex-row justify-center items-center">
-            <input
-              class="w-full lg:w-inherit lg:mr-4 lg:mb-0 mb-4 py-[11px] px-5 text-dark_blue placeholder:text-[14px] rounded-md border-none outline-none"
-              type="email" placeholder="Enter your email address">
+              <input
+              class="w-full lg:w-inherit lg:mr-4 lg:mb-0 mb-4 py-[11px] px-5 text-dark_blue placeholder:text-[14px] border-white rounded-md outline-none invalid:border-red-500"
+              type="email" placeholder="Enter your email address" required>
+
             <button class="w-full lg:w-inherit font-medium py-[10px] px-6 bg-custom_orange text-sm leading-[28px] rounded-md box-border
               rounded-5
               border-2
@@ -487,7 +517,8 @@
             <div class="lg:mr-16 lg:mb-0 mb-[39px]">
               <img src="./img/logo-white.svg" alt="Logo">
             </div>
-            <ul class="nav__list flex lg:flex-row flex-col items-center gap-x-12 lg:mb-0 text-default_size leading-17 tracking-1.5 text-white mb-10">
+            <ul
+              class="nav__list flex lg:flex-row flex-col items-center gap-x-12 lg:mb-0 text-default_size leading-17 tracking-1.5 text-white mb-10">
               <li class="nav__item lg:mb-0 mb-8">
                 <a href="#" class="hover:text-custom_orange ease-in transition duration-150">FEATURES</a>
               </li>

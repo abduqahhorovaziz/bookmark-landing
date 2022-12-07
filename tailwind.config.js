@@ -3,6 +3,16 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+
+      keyframes: {
+        opacit: {
+          '0%': {opacity: 0},
+          '100%': {opacity: 100}
+        }
+      },
+      animation: {
+        opacit: 'opacit 0.3s ease-in-out',
+      },
       spacing: {
         '320': '320px',
         'sm': '640px',
@@ -43,4 +53,7 @@ module.exports = {
     }
   },
   plugins: [],
+  corePlugins: {
+    container: false,
+  },
 }
