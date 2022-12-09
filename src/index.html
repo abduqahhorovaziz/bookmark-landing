@@ -132,22 +132,22 @@
                 it on Firefox</button>
             </div>
           </div>
-          <div class="desk__image w-[670px] h-[485.5px] 320:mb-10">
+          <div class="desk__image md:w-[670px] w-auto h-[260px] md:h-[485.5px]  320:mb-5">
             <!-- <img class="desk__image_el absolute md:right-[-74px] z-10" src="./img/desktop.png" alt="desk">
             <img class="desk__image_el absolute right-[-576px] top-[134px] z-0" src="./img/rectangle-full.jpg"
               alt="rectangle"> -->
-              <img src="./img/desk-and-rect.png" class="absolute  right-0" alt="">
+              <img src="./img/desk-and-rect.png" class="absolute  right-0 top-0" alt="">
           </div>
         </div>
       </div>
     </section>
 
     <section class="features py-20 320:overflow-hidden">
-      <div class="container mx-auto mb-[72px]">
+      <div class="container-custom mx-auto mb-[72px]">
         <div class="features__header max-w-[540px] mx-auto font-rubik text-dark_blue">
           <h2 class="features__title text-center font-medium lg:text-[32px] lg:leading-[52px] text-[24px] mb-4">Features
           </h2>
-          <p class="features__subtitle text-center lg:text-[18px] lg:leading-[28px] text-[15px]opacity-50">Our aim is to
+          <p class="features__subtitle mb-10 text-center lg:text-[18px] lg:leading-[28px] text-[15px]opacity-50">Our aim is to
             make it quick and easy
             for you to access your favourite websites. Your bookmarks
             sync between your devices so you can access them on the go.</p>
@@ -180,11 +180,11 @@
         </div>
         <div id="myTabContent">
           <div
-            class="flex lg:flex-row flex-col items-center justify-center sm:items-center animate-opacit duration-200 ease-in"
+            class="flex px-[15px] lg:flex-row flex-col items-center justify-center sm:items-center animate-opacit duration-200 ease-in"
             id="simple" role="tabpanel" aria-labelledby="simple-tab">
             <div class="relative mr-[125px]">
               <img class="relative z-10 lg:ml-4" src="./img/features-desk.svg" alt="desk">
-              <img class="absolute left-[-65px] lg:top-[95px] top-[70px]  w-full z-0" src="./img/rectangle-2.svg"
+              <img class="absolute left-[-60px] lg:top-[95px] top-[70px]  w-full z-0" src="./img/rectangle-2.svg"
                 alt="rectangle">
             </div>
             <div class="max-w-[445px] text-dark_blue text-center lg:text-left lg:mt-0 mt-12">
@@ -209,7 +209,7 @@
             </div>
           </div>
           <div
-            class="flex lg:flex-row flex-col items-center justify-center sm:items-center animate-opacit duration-200 ease-in"
+            class="flex px-[15px] lg:flex-row flex-col items-center justify-center sm:items-center animate-opacit duration-200 ease-in"
             id="speedy" role="tabpanel" aria-labelledby="simple-tab">
             <div class="relative mr-[125px]">
               <img class="relative z-10 lg:ml-4" src="./img/intelli.svg" alt="desk">
@@ -237,7 +237,7 @@
             </div>
           </div>
           <div
-            class="flex lg:flex-row flex-col items-center justify-center sm:items-center animate-opacit duration-200 ease-in"
+            class="flex px-[15px] lg:flex-row flex-col items-center justify-center sm:items-center animate-opacit duration-200 ease-in"
             id="easy" role="tabpanel" aria-labelledby="simple-tab">
             <div class="relative mr-[125px]">
               <img class="relative z-10 lg:ml-4" src="./img/bookmarks.svg   " alt="desk">
@@ -399,7 +399,7 @@
     </section>
 
     <section class="pt-[69px] pb-20">
-      <div class="container mx-auto mb-[72px]">
+      <div class="container-custom mx-auto mb-[72px]">
         <div class="max-w-[540px] mx-auto font-rubik text-dark_blue mb-14">
           <h2 class="text-center font-medium text-[24px] lg:text-[32px] lg:leading-[52px]  mb-4">Frequently Asked
             Questions</h2>
@@ -487,17 +487,19 @@
 
 
     <footer class="pt-[58px] bg-custom_blue text-white font-rubik">
-      <div class="container mx-auto pb-16">
+      <div class="container-custom mx-auto pb-16">
         <div class="max-w-[442px] mx-auto text-center">
           <p class="font-medium text-sm leading-10 tracking-[5px] lg:mb-[74px]">35,000+ ALREADY JOINED</p>
           <h4 class="font-medium lg:text-[32px] text-[24px] leading-10 mb-9 tracking-[-0.1px]">Stay up-to-date with what
             we’re doing</h4>
-          <form class="flex flex-col lg:flex-row justify-center items-center">
+          <form class="flex flex-col lg:flex-row justify-center items-start lg:w-[442px]">
+            <div class="w-[300px] lg:w-inherit lg:mr-4 lg:mb-0 mb-4">           
               <input
-              class="w-full lg:w-inherit lg:mr-4 lg:mb-0 mb-4 py-[11px] px-5 text-dark_blue placeholder:text-[14px] border-white rounded-md outline-none invalid:border-red-500"
-              type="email" placeholder="Enter your email address" required>
-
-            <button class="w-full lg:w-inherit font-medium py-[10px] px-6 bg-custom_orange text-sm leading-[28px] rounded-md box-border
+              class="peer w-full py-[11px] px-5 text-dark_blue placeholder:text-[14px] border-white rounded-md outline-none "
+              type="email" placeholder="Enter your email address" required name="email">
+              <p class="invisible pl-3 text-[#FA5959] py-[4px] text-[10px] leading-3 tracking-[0.25px] text-left italic">Whoops, make sure it’s an email</p>
+            </div>
+            <button class="lg:w-[130px] font-medium py-[10px] px-6 bg-custom_orange text-sm leading-[28px] rounded-md box-border
               rounded-5
               border-2
               border-transparent 
